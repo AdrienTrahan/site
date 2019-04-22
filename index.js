@@ -32,7 +32,7 @@ function load() {
   }
 
   if (isMobile()) {
-    
+    document.getElementById("alert").style.display = "block";
   }
 } // custom animations
 
