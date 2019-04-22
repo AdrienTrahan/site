@@ -252,5 +252,6 @@ span, a{
   width: 100%;
   left: 0px;
   z-index: 200000;
-  font-family: sans-serif;;
+  font-family: sans-serif;
+  display: none;
 }
