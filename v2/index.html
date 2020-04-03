@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Adrien Trahan</title>
+    <meta
+         name='viewport'
+         content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'
+    />
+    <script src="https://www.gstatic.com/firebasejs/6.3.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyBy-ClZ02vG9kWks-MHBEC6DoZ5DZV9otY",
+        authDomain: "site-9140b.firebaseapp.com",
+        databaseURL: "https://site-9140b.firebaseio.com",
+        projectId: "site-9140b",
+        storageBucket: "",
+        messagingSenderId: "876414204015",
+        appId: "1:876414204015:web:7eaecd9baea7b237"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" charset="utf-8"></script>
+
+  </head>
+  <body>
+    <button class="language" onclick="change()" type="button" name="button">English</button>
+    <div class="container">
+      <ul class="menu">
+        <li onclick="scrollToSmoothly(2200, 900);">Contact</li>
+        <li onclick="scrollToSmoothly(1800, 700);">Projects</li>
+        <li onclick="scrollToSmoothly(1400, 700);">Experience</li>
+        <li onclick="scrollToSmoothly(800, 400);">Knowledge</li>
+        <li onclick="scrollToSmoothly(200, 100);">Presentation</li>
+      </ul>
+      <h1>Adrien Trahan</h1>
+      <h2>The developer you must hire</h2>
+      <h3>I’m a fullstack developer who loves to develope responsive web and attractive mobile apps. <br>Over the years, I learned to code cleanly in different languages.</h3>
+      <h4>I have a lot of experience with Swift and HTML(css&js).
+I’m proficient in Python, and I have experience with node.js and with the electron framework.
+I’ve experienced working with Java. I know how to use git, npm, cocoapods, and pip properly.</h4>
+
+      <ul class="experience">
+        <li>Won a hackathon at Polytechnique Montreal in collaboration with my school in 2017 (scholarship 250 $)</li>
+        <li>Part of the programming team for DROIDE 5865 <br>(College Saint Sacrement) <br>Our robot was qualified for VEX WORLDS 2019</li>
+        <li>Won a hackathon at Polytechnique Montreal in collaboration with my school in 2019 (scholarship 500 $)</li>
+        <li>Participation to the Concordia’s artificial inteligence hackathon (ConcordAI) 2019</li>
+        <li>Me and my team won judge's choice at Hackatown 2020 at Polytechnique Montreal</li>
+
+        <div class="projects">
+          <div class="line"><h7>Projects</h7></div>
+          <div class="row">
+            <div class="column">
+              <div  onclick="window.location = 'compiler.html' + window.location.search" class="card"><img src="compiler.png"><br><h8>Compiler</h8></div>
+            </div>
+            <div class="column">
+              <div  onclick="window.location = 'antisnoring.html' + window.location.search" class="card"><img src="antisnoring.png"><br><h8>Antisnoring</h8></div>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <h5 class="title">Reach Out</h5>
+          <ul class="social">
+            <li><img src="facebook-512.png" alt="facebook" onclick="window.location =  'https://www.facebook.com/adrien.trahan.1'"></li>
+            <li><img src="instagram-6-512.png" alt="instagram" onclick="window.location =  'https://www.instagram.com/adrien.trahan/?hl=en'"></li>
+            <li><img src="stackoverflow-512.png" alt="stackoverflow" onclick="window.location =  'https://stackoverflow.com/users/11266658/adrien-trahan?tab=profile'"></li>
+            <li><img src="github-6-512.png" alt="github" onclick="window.location =  'https://github.com/AdrienTrahan'"></li>
+            <li><img src="linkedin-512.png" alt="linked" onclick="window.location =  'https://www.linkedin.com/in/adrien-trahan-935b69185/'"></li>
+            <li><img src="mail-512.png" alt="mail"  onclick="window.location =  'mailto:adrientrahan265@gmail.com'"></li>
+          </ul>
+          <h6>This website was created with ❤️ by Adrien Trahan</h6><span>copyright© 2020.</span>
+        </div>
+      </ul>
+
+
+
+      <img src="image1.png" alt="image1" class="programing">
+      <img src="image2.png" alt="image2" class="terminal">
+    </div>
+
+  </body>
+</html>
