@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Adrien Trahan</title>
+    <meta name="viewport" content="width=device-width">
+    <script src="libraries/popper.min.js" charset="utf-8"></script>
+    <script src="libraries/jquery.min.js" charset="utf-8"></script>
+    <script defer src="index.js" charset="utf-8"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <h2>Salut!<br>Je suis Adrien Trahan, un développeur fullstack qui adore concevoir des sites webs adaptifs et des apps mobiles attrayantes. </h2>
+    <div class="buttonContainer">
+      <input id="mecontacter" class="choices" type="button" name="" value="me contacter">
+      <input id="downloadresume" class="choices" type="button" name="" value="télécharger mon cv">
+      <input id="lookproject" class="choices" type="button" name="" value="voir mes projets">
+    </div>
+    <div id="contactTooltip" role="tooltip">
+      <ul>
+        <li onclick = "window.location='http://github.com/adrienTrahan'"><img src="assets/github.png">github</li>
+        <li onclick = "window.location='https://www.facebook.com/adrien.trahan.1'"><img src="assets/facebook.png">facebook</li>
+        <li onclick = "window.location='https://www.instagram.com/adrien.trahan/?hl=en'"><img src="assets/instagram.png">instagram</li>
+        <li onclick = "window.location='https://ca.linkedin.com/in/adrien-trahan-935b69185'"><img src="assets/linkedin.png">linkedin</li>
+        <li onclick="window.location='mailto:adrientrahan265@gmail.com'"><img src="assets/mail.png">email</li>
+        <li onclick="window.location='tel:4385234409'"><img src="assets/phone.png">phone</li>
+      </ul>
+      <div id="arrow" data-popper-arrow></div>
+    </div>
+    <iframe src="" id="download" style="display:none" width="" height=""></iframe>
+  </body>
+</html>
