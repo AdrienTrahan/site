@@ -46,7 +46,7 @@ function isDescendant(parent, child) {
 document.body.onclick = hide;
 button.onclick = show;
 document.getElementById("downloadresume").onclick = function () {
-  document.getElementById("download").src = "https://docs.google.com/document/d/1ikCUkn8H3xxmR-DWi1jGIEY5zX7n2WOhF_94s_lZFlo/export?format=pdf";
+  window.open('https://docs.google.com/document/d/1ikCUkn8H3xxmR-DWi1jGIEY5zX7n2WOhF_94s_lZFlo/edit?usp=sharing','_blank');
 }
 
 document.getElementById("lookproject").onclick = function () {
