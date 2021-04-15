@@ -109,6 +109,9 @@
         margin: 10px 20px 0px 100px;
         width: auto;
         height: auto;
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
       }
       .contact-object:hover{
         transform: scale(1.1);
@@ -165,9 +168,13 @@
         .hook-words{
           margin-top: 120px;
         }
-        .hook-words, .quick-desc, .contact, .experience-button{
+        .hook-words, .quick-desc, .experience-button{
           margin-left: 30px;
           margin-right: 30px;
+        }
+        .contact{
+          margin-left: 10px;
+          margin-right: 20px;
         }
         .hook-words{
           font-size: 40px;
@@ -184,6 +191,15 @@
       @media only screen and (max-width: 350px) {
         .contact-object{
           margin: 10px 0px 0px 10px;
+        }
+        .contact{
+          margin-left: 10px;
+        }
+      }
+      @media only screen and (max-width: 250px) {
+        .contact-object{
+          width: 12.5px;
+          height: 12.5px;
         }
         .contact{
           margin-left: 10px;
