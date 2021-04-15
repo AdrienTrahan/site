@@ -2,6 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="theme-color" content="#1A1A1A">
     <title>Adrien Trahan</title>
     <link rel="icon" type="image/png" href="./favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@400;500;900&display=swap" rel="stylesheet">
@@ -168,10 +169,24 @@
           margin-left: 30px;
           margin-right: 30px;
         }
+        .hook-words{
+          font-size: 40px;
+        }
+        .quick-desc{
+          font-size: 17px;
+        }
         .contact-object{
           width: 15px;
           height: 15px;
           margin: 10px 0px 0px 20px;
+        }
+      }
+      @media only screen and (max-width: 350px) {
+        .contact-object{
+          margin: 10px 0px 0px 10px;
+        }
+        .contact{
+          margin-left: 10px;
         }
       }
     </style>
@@ -194,9 +209,6 @@
         Je m’appelle Adrien et je suis un développeur fullstack web & ios avec le gout d’apprendre et l’envie de concevoir des interfaces propres et attrayantes.
       </h2>
       <button onclick="window.open('https://docs.google.com/document/d/1ikCUkn8H3xxmR-DWi1jGIEY5zX7n2WOhF_94s_lZFlo/edit')" class="experience-button" >mes projets</button>
-    </div>
-    <div class="footer">
-      programmé avec ❤️ avec js/html/css
     </div>
   </body>
 </html>
