@@ -3,31 +3,200 @@
   <head>
     <meta charset="utf-8">
     <title>Adrien Trahan</title>
+    <link rel="icon" type="image/png" href="./favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Poppins:wght@400;500;900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width">
     <script src="libraries/popper.min.js" charset="utf-8"></script>
     <script src="libraries/jquery.min.js" charset="utf-8"></script>
-    <script defer src="index.js" charset="utf-8"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <script defer src="index.js" charset="utf-8"></script><style>
+      /* same layout on every browser */
+      *{
+        margin: 0px;
+        padding: 0px;
+        -webkit-transition:all 1s ease;
+        -moz-transition:all 1s ease;
+        -o-transition:all 1s ease;
+        transition:all 1s ease;
+      }
+      :root{
+        --button-background-color: #9ce714;
+      }
+      body, html{
+        margin: 0px;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        padding: 0px;
+        background-color: #1A1A1A;
+        overflow: scroll;
+      }
+      header{
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .background-text{
+        color: #1E1E1E;
+        font-size: 210px;
+        font-weight: 900;
+        line-height: 210px;
+        font-family: 'Poppins', sans-serif;
+        user-select: none;
+        position: fixed;
+        top: 150px;
+        left: 40px;
+        height: auto;
+        z-index: -10;
+      }
+
+      /* header */
+
+      .name-title{
+        color: #8F8F8F;
+        font-family: Poppins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: left;
+        cursor: pointer;
+        margin: 10px 10px 10px 15px;
+        display: inline-block;
+      }
+
+      /* left fixed presentation */
+      .fixed-presentation{
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 600px;
+        max-width: 100%;
+        z-index: -1;
+      }
+
+      .hook-words{
+        position: relative;
+        font-family: Josefin Sans;
+        font-size: 49px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 49px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #FFFFFF;
+        margin: 180px 80px 0px 80px;
+        max-width: 400px;
+      }
+
+      .quick-desc{
+        position: relative;
+        font-family: Poppins;
+        font-size: 21px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #666666;
+        margin: 25px 80px 0px 80px;
+      }
+
+      .contact{
+        margin: 10px 20px 0px 100px;
+        width: auto;
+        height: auto;
+      }
+      .contact-object:hover{
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
+      .contact-object:active{
+        transform: scale(1.1);
+        opacity: 0.3;
+      }
+      .contact-object{
+        transition: all 0.2s;
+        width: 20px;
+        height: 20px;
+        margin: 10px 0px 0px 20px;
+        cursor: pointer;
+        user-select: none;
+        
+      }
+      .contact-object:first-child{
+        margin-right: 0px;
+      }
+
+      .experience-button{
+        margin: 25px 80px 0px 80px;
+        padding: 12.5px 30px 12.5px 30px;
+        border-radius: 9px;
+        color: #1A1A1A;
+        background-color: var(--button-background-color);
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .experience-button:hover{
+        opacity: 0.7;
+      }
+      .experience-button:active{
+        opacity: 0.3;
+      }
+
+      .footer{
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        color: #686868;
+        font-family: sans-serif;
+        padding: 0px 15px 5px 15px;
+      }
+      @media only screen and (max-width: 590px) {
+        .hook-words{
+          margin-top: 120px;
+        }
+        .hook-words, .quick-desc, .contact, .experience-button{
+          margin-left: 30px;
+          margin-right: 30px;
+        }
+        .contact-object{
+          width: 15px;
+          height: 15px;
+          margin: 10px 0px 0px 20px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h2>Salut!<br>Je suis Adrien Trahan, un développeur fullstack qui adore concevoir des sites webs adaptifs et des apps mobiles attrayantes. </h2>
-    <div class="buttonContainer">
-      <input id="mecontacter" class="choices" type="button" name="" value="me contacter">
-      <input id="downloadresume" class="choices" type="button" name="" value="voir mon cv">
-      <input id="lookproject" class="choices" type="button" name="" value="voir mes projets">
+    
+    <p class="background-text">fullstack</p>
+    <header>
+      <h3 class="name-title">Adrien Trahan</h3>
+      <div class="contact">
+        <img class="contact-object" onclick="window.open('https://github.com/AdrienTrahan')" src="./assets/github.png" alt="github">
+        <img class="contact-object" onclick="window.open('https://www.linkedin.com/in/adrien-trahan-935b69185/')" src="./assets/linkedin.png" alt="linkedin">
+        <img class="contact-object" onclick="window.open('https://www.facebook.com/adrien.trahan/')" src="./assets/facebook.png" alt="facebook">
+        <img class="contact-object" onclick="window.open('https://www.instagram.com/adrien.trahan/')" src="./assets/instagram.png" alt="instagram">
+      </div>
+    </header>
+    <div class="fixed-presentation">
+      <h1 class="hook-words">Développeur fullstack passionné</h1>
+      <h2 class="quick-desc">
+        Je m’appelle Adrien et je suis un développeur fullstack web & ios avec le gout d’apprendre et l’envie de concevoir des interfaces propres et attrayantes.
+      </h2>
+      <button onclick="window.open('https://docs.google.com/document/d/1ikCUkn8H3xxmR-DWi1jGIEY5zX7n2WOhF_94s_lZFlo/edit')" class="experience-button" >mes projets</button>
     </div>
-    <div id="contactTooltip" role="tooltip">
-      <ul>
-        <li onclick = "window.location='http://github.com/adrienTrahan'"><img src="assets/github.png">github</li>
-        <li onclick = "window.location='https://www.facebook.com/adrien.trahan.1'"><img src="assets/facebook.png">facebook</li>
-        <li onclick = "window.location='https://www.instagram.com/adrien.trahan/?hl=en'"><img src="assets/instagram.png">instagram</li>
-        <li onclick = "window.location='https://ca.linkedin.com/in/adrien-trahan-935b69185'"><img src="assets/linkedin.png">linkedin</li>
-        <li onclick="window.location='mailto:adrientrahan265@gmail.com'"><img src="assets/mail.png">email</li>
-        <li onclick="window.location='tel:4385234409'"><img src="assets/phone.png">phone</li>
-      </ul>
-      <div id="arrow" data-popper-arrow></div>
+    <div class="footer">
+      programmé avec ❤️ avec js/html/css
     </div>
-    <iframe src="" id="download" style="display:none" width="" height=""></iframe>
   </body>
 </html>
