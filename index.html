@@ -57,7 +57,7 @@
       }
       let currentLanguage = parseInt(getCookie("lang")) | 0;
       function changeLanguage(language){
-        currentLanguage = language;
+        currentLanguage = parseInt(language);
         eraseCookie("lang");
         setCookie("lang", language, 300);
         updatePage();
@@ -65,6 +65,8 @@
       function updatePage(){
         let keys = Object.keys(siteContent[currentLanguage]);
         document.getElementsByClassName("selection-view")[0].value = currentLanguage;
+        console.log(currentLanguage ? "🇺🇸" : "🇫🇷", currentLanguage);
+        document.getElementsByClassName("chosen-element")[0].innerText = currentLanguage ? "🇺🇸" : "🇫🇷";
         for (var i = 0; i < keys.length; i++){
           document.getElementsByClassName(keys[i])[0].innerText = siteContent[currentLanguage][keys[i]];
         }
@@ -239,6 +241,14 @@
         background-color: #232323;
         cursor: pointer;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 39px;
+        padding-left: 2.5px;
+        padding-bottom: 1px;
+        box-sizing: border-box;
       }
       .hover-dropdown:hover{
         filter: brightness(1.5);
@@ -264,6 +274,7 @@
         text-align-last:center; 
         text-align: center;
         cursor: pointer;
+        color: transparent;
       }
       
 
@@ -316,6 +327,7 @@
       <h3 class="name-title">Adrien Trahan</h3>
       <div class="contact">
         <div class="hover-dropdown">
+          <span class="chosen-element">🇫🇷</span>
           <select onchange="changeLanguage(this.value)" class="selection-view">
             <option value="0">🇫🇷</option>
             <option value="1">🇺🇸</option>
