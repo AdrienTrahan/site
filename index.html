@@ -16,7 +16,62 @@
 
       gtag('config', 'G-5VRBWVP3LT');
     </script>
-    <script defer src="index.js" charset="utf-8"></script><style>
+    <script defer>
+      let siteContent = {
+        0: {
+          "hook-words": "Développeur fullstack passionné",
+          "quick-desc": "Je m’appelle Adrien et je suis un développeur fullstack web & ios avec le goût d’apprendre et l’envie de concevoir des interfaces propres et attrayantes.",
+          "experience-button": "mon porfolio",
+        },
+        1: {
+          "hook-words": "Passionate fullstack developer",
+          "quick-desc": "My name is Adrien and I am a full stack web & ios developer with a taste for learning and the desire to design clean and attractive interfaces.",
+          "experience-button": "my porfolio",
+        },
+        links: {
+          0: "cv",
+          1: "resume"
+        }
+      }
+      function setCookie(name,value,days) {
+          var expires = "";
+          if (days) {
+              var date = new Date();
+              date.setTime(date.getTime() + (days*24*60*60*1000));
+              expires = "; expires=" + date.toUTCString();
+          }
+          document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+      }
+      function getCookie(name) {
+          var nameEQ = name + "=";
+          var ca = document.cookie.split(';');
+          for(var i=0;i < ca.length;i++) {
+              var c = ca[i];
+              while (c.charAt(0)==' ') c = c.substring(1,c.length);
+              if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+          }
+          return null;
+      }
+      function eraseCookie(name) {   
+          document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+      }
+      let currentLanguage = parseInt(getCookie("lang")) | 0;
+      function changeLanguage(language){
+        currentLanguage = language;
+        eraseCookie("lang");
+        setCookie("lang", language, 300);
+        updatePage();
+      }
+      function updatePage(){
+        let keys = Object.keys(siteContent[currentLanguage]);
+        document.getElementsByClassName("selection-view")[0].value = currentLanguage;
+        for (var i = 0; i < keys.length; i++){
+          document.getElementsByClassName(keys[i])[0].innerText = siteContent[currentLanguage][keys[i]];
+        }
+        document.getElementsByClassName("experience-button")[0].onclick = () => window.open("/" + siteContent.links[currentLanguage] + ".pdf")
+      }
+    </script>
+    <style>
       /* same layout on every browser */
       *{
         margin: 0px;
@@ -141,7 +196,6 @@
       }
 
       .experience-button{
-        margin: 25px 80px 100px 80px;
         padding: 12.5px 30px 12.5px 30px;
         border-radius: 9px;
         color: #1A1A1A;
@@ -152,7 +206,9 @@
         outline: none;
         border: none;
         cursor: pointer;
+        height: 39px;
         transition: all 0.2s;
+        border-right: 1px solid #1a1a1a;
       }
       .experience-button:hover{
         opacity: 0.7;
@@ -170,11 +226,52 @@
         font-family: sans-serif;
         padding: 0px 15px 5px 15px;
       }
+      .button-selection-container{
+        margin: 25px 80px 100px 80px;
+        transition: all 0.2s;
+        display: flex;
+      }
+      .hover-dropdown{
+        border-radius: 9px;
+        width: 40px;
+        height: 39px;
+        transition: all 0.2s;
+        background-color: #232323;
+        cursor: pointer;
+        position: relative;
+      }
+      .hover-dropdown:hover{
+        filter: brightness(1.5);
+      }
+      .hover-dropdown:active{
+        filter: brightness(2);
+      }
+      .selection-view{
+        padding-left: 3px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 39px;
+        min-height: 39px;
+        line-height: 39px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        -moz-appearance:none;
+        -webkit-appearance:none;
+        appearance:none;
+        text-align-last:center; 
+        text-align: center;
+        cursor: pointer;
+      }
+      
+
       @media only screen and (max-width: 590px) {
         .hook-words{
           margin-top: 120px;
         }
-        .hook-words, .quick-desc, .experience-button{
+        .hook-words, .quick-desc, .button-selection-container{
           margin-left: 30px;
           margin-right: 30px;
         }
@@ -214,11 +311,16 @@
     </style>
   </head>
   <body>
-    
     <p class="background-text">fullstack</p>
     <header>
       <h3 class="name-title">Adrien Trahan</h3>
       <div class="contact">
+        <div class="hover-dropdown">
+          <select onchange="changeLanguage(this.value)" class="selection-view">
+            <option value="0">🇫🇷</option>
+            <option value="1">🇺🇸</option>
+          </select>
+        </div>
         <img class="contact-object" onclick="window.open('https://github.com/AdrienTrahan')" src="./assets/github.png" alt="github">
         <img class="contact-object" onclick="window.open('https://www.linkedin.com/in/adrien-trahan-935b69185/')" src="./assets/linkedin.png" alt="linkedin">
         <img class="contact-object" onclick="window.open('https://www.facebook.com/adrien.trahan/')" src="./assets/facebook.png" alt="facebook">
@@ -230,7 +332,11 @@
       <h2 class="quick-desc">
         Je m’appelle Adrien et je suis un développeur fullstack web & ios avec le goût d’apprendre et l’envie de concevoir des interfaces propres et attrayantes.
       </h2>
-      <button onclick="window.open('/cv.pdf')" class="experience-button" >mon porfolio</button>
+      <div class="button-selection-container">
+        <button onclick="window.open('/cv.pdf')" class="experience-button" >mon porfolio</button>
+        
+      </div>
     </div>
+    <script>updatePage()</script>
   </body>
 </html>
