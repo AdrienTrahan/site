@@ -65,7 +65,6 @@
       function updatePage(){
         let keys = Object.keys(siteContent[currentLanguage]);
         document.getElementsByClassName("selection-view")[0].value = currentLanguage;
-        console.log(currentLanguage ? "🇺🇸" : "🇫🇷", currentLanguage);
         document.getElementsByClassName("chosen-element")[0].innerText = currentLanguage ? "🇺🇸" : "🇫🇷";
         for (var i = 0; i < keys.length; i++){
           document.getElementsByClassName(keys[i])[0].innerText = siteContent[currentLanguage][keys[i]];
