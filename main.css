@@ -6,6 +6,19 @@
   -o-transition:all 1s ease;
   transition:all 1s ease;
 }
+
+@keyframes backForth {
+  0%{
+    transform: translateY(-80px);
+  }
+  50%{
+    transform: translateY(150px);
+  }
+  100%{
+    transform: translateY(-80px);
+  }
+}
+
 :root{
   --button-background-color: #9ce714;
 }
@@ -273,20 +286,11 @@ header{
 .arrow{
   position: relative;
   width: 30px;
-  left: 50%;
-  transform: translate(-50%, -50px);
-  animation: backForth 2s infinite;
-}
-@keyframes backForth {
-  0%{
-    transform: translate(-50%, -40px);
-  }
-  50%{
-    transform: translate(-50%, -50px);
-  }
-  100%{
-    transform: translate(-50%, -40px);
-  }
+  left: calc(50% - 15px);
+  transform: translateY(-80px);
+  animation: backForth 1500ms infinite;
+  -webkit-animation: backForth 1500ms infinite;
+  -moz-animation: backForth 1500ms infinite;;
 }
 .closePlayer{
   width: 50px;
