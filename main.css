@@ -270,6 +270,7 @@ header{
   transition: all 100ms;
   position: absolute;
   top: 10px;
+  z-index: 20;
   right: 10px;
 }
 .closePlayer:hover{
