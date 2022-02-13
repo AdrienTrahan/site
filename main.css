@@ -226,15 +226,17 @@ header{
   font-size: 14px;
 }
 .textZone img{
-  float: right;
-  max-width: 400px;
-  margin: 20px;
-  max-width: calc(50% - 40px);
+  width: 100%;
 }
 .preview{
-  flex: 1;
+  float: right;
+  position: relative;
+  margin: 20px;
+  max-width: calc(50% - 40px);
+  cursor: pointer;
 }
-.preview img{
+.preview:hover{
+  opacity: 0.6;
 }
 .fullscreenplayer{
   position: fixed;
@@ -249,6 +251,16 @@ header{
   z-index: 10;
   display: none;
   opacity: 0;
+}
+.playButton{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 30px;
+  height: 30px;
+  filter: invert(1);
+  opacity: 0.5;
 }
 .fullscreenplayer video{
   width: auto;
@@ -313,7 +325,7 @@ header{
   }
 }
 @media only screen and (max-width: 500px) {
-  .textZone img{
+  .preview{
     max-width: calc(100% - 40px);
   }
 }

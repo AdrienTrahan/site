@@ -161,7 +161,7 @@ window.requestAnimFrame = (function(){
 function openPlayer(){
     document.querySelector('#player').play();
 
-    document.querySelector('#player').playbackRate = 2.0;
+    document.querySelector('#player').playbackRate = 1.5;
     document.getElementsByClassName("fullscreenplayer")[0].style.display = "block";
     document.getElementsByClassName("fullscreenplayer")[0].style.opacity = 1;
 }
