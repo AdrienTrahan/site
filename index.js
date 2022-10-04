@@ -3,12 +3,12 @@ let siteContent = {
     0: {
         "hook-words": "Développeur fullstack passionné",
         "quick-desc": "Je m’appelle Adrien et je suis un développeur fullstack web & ios avec le goût d’apprendre et l’envie de concevoir des interfaces propres et attrayantes.",
-        "experience-button": "mon porfolio",
+        "experience-button": "mon portfolio",
     },
     1: {
         "hook-words": "Passionate fullstack developer",
         "quick-desc": "My name is Adrien and I am a full stack web & ios developer with a taste for learning and the desire to design clean and attractive interfaces.",
-        "experience-button": "my porfolio",
+        "experience-button": "my portfolio",
     },
     links: {
         0: "cv",
