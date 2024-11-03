@@ -1,0 +1,35 @@
+{
+    "body": [
+        "Hi, I'm Adrien",
+        "\n",
+        "\n",
+        "I'm a full-stack developer studying at ",
+        {
+            "name": "Polymtl",
+            "link": "https://polymtl.ca/",
+            "color": "orange"
+        },
+        " in software engineering.",
+        "\n",
+        "I have a strong interest in AI, interface design, and ambitious projects.",
+        "\n",
+        "\n",
+        "See my ",
+        {
+            "name": "projects",
+            "link": "https://github.com/adrientrahan",
+            "color": "cyan"
+        },
+        "\n",
+        "See my ",
+        {
+            "name": "portfolio",
+            "link": "/cv/en.pdf",
+            "color": "lime"
+        }
+    ],
+    "footer": {
+        "updated": "Updated on",
+        "hosted": "Source code"
+    }
+}
