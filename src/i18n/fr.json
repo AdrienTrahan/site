@@ -11,25 +11,23 @@
         },
         " en génie logiciel.",
         "\n",
-        "J’ai beaucoup d’intérêt pour l’IA, la conception d’interfaces et les projets ambitieux.",
+        "Je suis passionné par l’IA, la conception d’interfaces et la réalisation de projets ambitieux.",
         "\n",
         "\n",
-        "Voir mes ",
         {
-            "name": "projets",
+            "name": "Projets",
             "link": "https://github.com/adrientrahan",
             "color": "cyan"
         },
         "\n",
-        "Voir mon ",
         {
-            "name": "portfolio",
+            "name": "Curriculum Vitae",
             "link": "/cv/fr.pdf",
             "color": "lime"
         }
     ],
     "footer": {
         "updated": "Mis à jour le",
-        "hosted": "Code source"
+        "hosted": "voir le code source"
     }
 }

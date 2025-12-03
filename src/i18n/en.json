@@ -11,25 +11,23 @@
         },
         " in software engineering.",
         "\n",
-        "I have a strong interest in AI, interface design, and ambitious projects.",
+        "I'm passionate about AI, interface design, and working on ambitious projects.",
         "\n",
         "\n",
-        "My ",
         {
-            "name": "projects",
+            "name": "Projects",
             "link": "https://github.com/adrientrahan",
             "color": "cyan"
         },
         "\n",
-        "My ",
         {
-            "name": "portfolio",
+            "name": "Resume",
             "link": "/cv/en.pdf",
             "color": "lime"
         }
     ],
     "footer": {
         "updated": "Updated on",
-        "hosted": "Source code"
+        "hosted": "view source code"
     }
 }
