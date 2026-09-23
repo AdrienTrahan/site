@@ -1,1 +1,0 @@
-import{r as e}from"../chunks/index.De_1-CT6.js";const r=()=>{throw e(302,"/fr")},t=Object.freeze(Object.defineProperty({__proto__:null,load:r},Symbol.toStringTag,{value:"Module"}));export{t as universal};
