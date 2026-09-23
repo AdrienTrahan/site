@@ -4,7 +4,7 @@
     const links = {
         linkedin: "https://www.linkedin.com/in/adrien-trahan-935b69185/",
         github: "https://github.com/AdrienTrahan/",
-        email: "mailto:adrien.trahan@gmail.com"
+        email: "mailto:contact@adrientrahan.com"
     };
 
     function formatDate(date: string) {
